@@ -9,7 +9,10 @@ public class Planet
         PrevPlanet = prevPlanet;
     }
     public string PlanetName { get; }
+
     public int OrdNumber { get; }
+
     public int EquatorLength { get; }
+
     public string? PrevPlanet { get; }
 }

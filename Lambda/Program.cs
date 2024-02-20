@@ -32,54 +32,60 @@ PlanetList.PlanetValidator checkerLambdaforLemony = (string planetName) =>
 };
 
 //var tuple = myList.GetPlanet("Земля", myList.PlanetChecker);
-var tuple = myList.GetPlanet("Земля", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+var (orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Земля", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Лимония", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Лимония", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Лимония", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Лимония", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Венерия", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Венерия", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Планета 17", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Планета 17", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Марс", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Венерия", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Венера", checkerLambda);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " +  tuple.ordNum + ", " +  tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Марс", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
+
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambda);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
 Console.WriteLine();
 Console.WriteLine("Тест на Лимонию");
 Console.WriteLine();
 
-tuple = myList.GetPlanet("Земля", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Земля", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Лимония", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Лимония", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Лимония", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Лимония", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Венерия", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Венерия", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Планета 17", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Планета 17", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Марс", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Венерия", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
 
-tuple = myList.GetPlanet("Венера", checkerLambdaforLemony);
-Console.WriteLine((tuple.ordNum == null) ? tuple.fault : (myList.NameOfIndex(tuple.ordNum) + ", " + tuple.ordNum + ", " + tuple.equatorLen));
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Марс", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
+
+(orderNumber, equatorLength, fault) = myList.GetPlanet("Земля", checkerLambdaforLemony);
+Console.WriteLine((orderNumber == null) ? fault : (myList.NameOfIndex(orderNumber) + ", " + orderNumber + ", " + equatorLength));
