@@ -1,7 +1,7 @@
 namespace Cortege;
 public class Planet
 {
-    public Planet(string planetName, int ordNumber, int equatorLength, string? prevPlanet)
+    public Planet(string planetName, int ordNumber, int equatorLength, Planet? prevPlanet)
     {
         PlanetName = planetName;
         OrdNumber = ordNumber;
@@ -11,5 +11,5 @@ public class Planet
     public string PlanetName { get; }
     public int OrdNumber { get; }
     public int EquatorLength { get; }
-    public string? PrevPlanet { get; }
+    public Planet? PrevPlanet { get; }
 }

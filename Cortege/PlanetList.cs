@@ -2,8 +2,10 @@ namespace Cortege;
 public class PlanetList
 {
     static Planet venus = new Planet("Венера", 2, 38025, null);
-    static Planet earth = new Planet("Земля", 3, 40075, venus.PlanetName);
-    static Planet mars = new Planet("Марс", 4, 21344, earth.PlanetName);
+//    static Planet earth = new Planet("Земля", 3, 40075, venus.PlanetName);
+    static Planet earth = new Planet("Земля", 3, 40075, venus);
+//    static Planet mars = new Planet("Марс", 4, 21344, earth.PlanetName);
+    static Planet mars = new Planet("Марс", 4, 21344, earth);
     private int faultQty = 0;
     private List<Planet> innerSunOrbitList = new List<Planet>();
     public PlanetList()
@@ -24,6 +26,7 @@ public class PlanetList
     }
    (int? ordNum, int? equatorLen, string? fault) checkPlanet (string planetName)
    {
+        faultQty++;
         foreach (var planetCounter in innerSunOrbitList)
         {
             if (planetCounter.PlanetName == planetName)
@@ -31,7 +34,6 @@ public class PlanetList
                 return (planetCounter.OrdNumber, planetCounter.EquatorLength, null);
             }
         }
-        faultQty++;
         return (null, null, "Не удалось найти планету " + planetName);
    }
    public string? NameOfIndex(int? ordNum)
